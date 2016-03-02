@@ -1,0 +1,44 @@
+int i, j, k, m;
+
+void main()
+{
+  TRISB = 0; // PORTB as Ouput Port
+  
+  start:
+  for(i = 0; i < 600; i++)
+  {
+   PORTB.F0 = 1;
+   Delay_us(300);//1ms Delay
+   PORTB.F0 = 0;
+   Delay_us(300);
+ }
+   Delay_ms(2000);
+   for(i = 0; i < 150; i++)
+  {
+   PORTB.F0 = 1;
+   Delay_us(1500);
+   PORTB.F0 = 0;
+   Delay_us(1500);
+ }
+    Delay_ms(500);
+    for(k = 0; k < 100; k++)
+  {
+   PORTB.F0 = 1;
+   Delay_us(2500);
+   PORTB.F0 = 0;
+   Delay_us(2500);
+ }
+    Delay_ms(2000);
+   for(m = 0; m < 150; m++)
+  {
+   PORTB.F0 = 1;
+   Delay_us(1500);
+   PORTB.F0 = 0;
+   Delay_us(1500);
+ }
+
+  Delay_ms(1000);
+  goto start;
+ 
+ 
+}
